@@ -1,8 +1,42 @@
 module.exports = {
-	title: 'Elementary OS Setup Guide',
-  description: 'Step by step to config elementary Os by Diego Leme',
   base: '/elementary-setup/',
+  locales: {
+    '/': {
+      lang: 'pt-BR', // this will be set as the lang attribute on <html>
+      title: 'Guia de configuração do elementary OS',
+      description: 'Passo a passo para configuração do elementary OS',
+    },
+    '/en/': {
+      lang: 'en-US',
+      title: 'Elementary OS Setup Guide',
+      description: 'Step by Step for elementary OS Configuration',
+    }
+  },
 	themeConfig: {
+    locales: {
+      '/': {
+        selectText: 'Idiomas',
+        label: 'Português',
+        editLinkText: 'Edite essa página no GitHub',
+        serviceWorker: {
+          updatePopup: {
+            message: "Novo conteudo está disponivel.",
+            buttonText: "Atualizar"
+          }
+        }
+      },
+      '/en/': {
+        selectText: 'Languages',
+        label: 'English',
+        editLinkText: 'Edit this page on GitHub',
+        serviceWorker: {
+          updatePopup: {
+            message: "New content is available.",
+            buttonText: "Refresh"
+          }
+        }
+      }
+    },
     sidebar: [
       ['/', 'Introduction'],
       {
