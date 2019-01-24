@@ -1,6 +1,7 @@
 module.exports = {
 	title: 'Elementary OS Setup Guide',
-	description: 'Step by step to config elementary Os by Diego Leme',
+  description: 'Step by step to config elementary Os by Diego Leme',
+  base: '/elementary-setup/',
 	themeConfig: {
     sidebar: [
       ['/', 'Introduction'],
