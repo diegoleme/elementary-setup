@@ -1,4 +1,4 @@
-# Base libs
+# Bibliotecas básicas
 
 ```bash
 sudo apt install apt-transport-https \

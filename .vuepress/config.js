@@ -1,3 +1,88 @@
+let dictionary = {
+  'pt-BR': {
+    'introduction': 'Introdução',
+    'getting-started': 'Começando',
+    'languages': 'Linguagens',
+    'tools': 'Ferramentas',
+    'applications': 'Aplicativos'
+  },
+  'en-US': {
+    'introduction': 'Introduction',
+    'getting-started': 'Getting Started',
+    'languages': 'Languages',
+    'tools': 'Tools',
+    'applications': 'Applications'
+  }
+}
+
+
+let sidebar = function (lang = 'pt-BR') {
+  let dl = dictionary[lang]
+
+  return [
+    ['/', dl['introduction']],
+    {
+      title: dl['getting-started'],
+      collapsable: true,
+      children: [
+        '/getting-started/creating-an-install-drive',
+        '/getting-started/installation',
+        '/getting-started/learning-the-basics',
+        '/getting-started/updating',
+        '/getting-started/system-preferences',
+        '/getting-started/base-libs'
+      ]
+    },
+    {
+      title: dl['languages'],
+      collapsable: true,
+      children: [
+        '/languages/node',
+        '/languages/ruby',
+        '/languages/java'
+      ]
+    },
+    {
+      title: dl['tools'],
+      collapsable: true,
+      children: [
+        '/tools/git',
+        '/tools/zsh',
+        '/tools/docker',
+        '/tools/aws-cli',
+        '/tools/http-server',
+        '/tools/httpie',
+        '/tools/image-optim',
+        '/tools/tree'
+      ]
+    },
+    {
+      title: dl['applications'],
+      collapsable: true,
+      children: [
+        '/applications/remove-apps',
+        '/applications/app-stores',
+        '/applications/eddy',
+        '/applications/browsers',
+        '/applications/formatter',
+        '/applications/gimp',
+        '/applications/google-docs',
+        '/applications/gravit-designer',
+        '/applications/inkscape',
+        '/applications/krita',
+        '/applications/peek',
+        '/applications/postman',
+        '/applications/simplenote',
+        '/applications/slack',
+        '/applications/spotify',
+        '/applications/steam',
+        '/applications/virtualbox',
+        '/applications/vscode'
+      ]
+    }
+  ]
+}
+
 module.exports = {
   base: '/elementary-setup/',
   locales: {
@@ -23,7 +108,8 @@ module.exports = {
             message: "Novo conteudo está disponivel.",
             buttonText: "Atualizar"
           }
-        }
+        },
+        sidebar: sidebar()
       },
       '/en/': {
         selectText: 'Languages',
@@ -34,69 +120,9 @@ module.exports = {
             message: "New content is available.",
             buttonText: "Refresh"
           }
-        }
+        },
+        sidebar: sidebar('en-US')
       }
-    },
-    sidebar: [
-      ['/', 'Introduction'],
-      {
-        title: 'Getting Started',
-        collapsable: true,
-        children: [
-          '/getting-started/installation',
-          '/getting-started/learning-the-basics',
-          '/getting-started/updating',
-          '/getting-started/system-preferences',
-          '/getting-started/base-libs'
-        ]
-      },
-      {
-        title: 'Languages',
-        collapsable: true,
-        children: [
-          '/languages/node',
-          '/languages/ruby',
-          '/languages/java'
-        ]
-      },
-      {
-        title: 'Tools',
-        collapsable: true,
-        children: [
-          '/tools/git',
-          '/tools/zsh',
-          '/tools/docker',
-          '/tools/aws-cli',
-          '/tools/http-server',
-          '/tools/httpie',
-          '/tools/image-optim',
-          '/tools/tree'
-        ]
-      },
-      {
-        title: 'Applications',
-        collapsable: true,
-        children: [
-          '/applications/remove-apps',
-          '/applications/app-stores',
-          '/applications/eddy',
-          '/applications/browsers',
-          '/applications/clipped',
-          '/applications/formatter',
-          '/applications/gimp',
-          '/applications/google-docs',
-          '/applications/gravit-designer',
-          '/applications/inkscape',
-          '/applications/krita',
-          '/applications/peek',
-          '/applications/postman',
-          '/applications/simplenote',
-          '/applications/slack',
-          '/applications/spotify',
-          '/applications/steam',
-          '/applications/vscode',
-        ]
-      }
-    ]
+    }
   }
 }

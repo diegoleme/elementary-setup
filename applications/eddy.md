@@ -1,3 +1,3 @@
 # Eddy
 
-Instalar Eddy via [Appcenter](https://appcenter.elementary.io/com.github.donadigo.eddy/).
+Instalar Eddy via [Appcenter](appstream://com.github.donadigo.eddy).

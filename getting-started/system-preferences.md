@@ -1,4 +1,4 @@
-# System preferences
+# Preferências do Sistema
 
 - Colocar foto de perfil
 - Escolher wallpaper
