@@ -1,24 +1,21 @@
 # Bibliotecas básicas
 
 ```bash
-sudo apt install apt-transport-https \
-                 ca-certificates \
-                 curl \
-                 wget \
-                 software-properties-common \
+sudo apt install adb \
+                 apt-transport-https \ 
                  build-essential \
-                 gcc \
-                 g++ \
-                 make \
-                 libxml2-dev \
-                 zlib1g-dev \
-                 xvfb \
+                 curl \
+                 libasound2 \
+                 libnss3 \
+                 libgconf-2-4 \
                  libgtk2.0-0 \
                  libnotify-dev \
-                 libgconf-2-4 \
-                 libnss3 \
+                 libxml2-dev \
                  libxss1 \
-                 libasound2 \
+                 software-properties-common \
+                 wget \
+                 xvfb \
+                 zlib1g-dev \
                  -y
 ```
 
