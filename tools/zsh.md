@@ -20,6 +20,7 @@ plugins=(
   urltools
   web-search
   yarn
+  dotenv
 )
 ```
 
